@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "248172629788",
+    "project_id": "catstagram-16063",
+    "storage_bucket": "catstagram-16063.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:248172629788:android:cf687e79ee977adc5374d9",
+        "android_client_info": {
+          "package_name": "com.mycompany.catstagram"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZnAcBIx3tHkg-yyea_-rSR_V217wYYrk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
