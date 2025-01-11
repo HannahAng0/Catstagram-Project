@@ -966,7 +966,7 @@ class _SignUpWidgetState extends State<SignUpWidget>
                                                     .signInWithEmail(
                                                   context,
                                                   _model
-                                                      .emailAddressTextController
+                                                      .emailAddressLoginTextController
                                                       .text,
                                                   _model
                                                       .passwordLoginTextController
@@ -977,8 +977,18 @@ class _SignUpWidgetState extends State<SignUpWidget>
                                                 }
 
                                                 context.pushNamedAuth(
-                                                    'HomePage',
-                                                    context.mounted);
+                                                  'HomePage',
+                                                  context.mounted,
+                                                  extra: <String, dynamic>{
+                                                    kTransitionInfoKey:
+                                                        const TransitionInfo(
+                                                      hasTransition: true,
+                                                      transitionType:
+                                                          PageTransitionType
+                                                              .fade,
+                                                    ),
+                                                  },
+                                                );
                                               },
                                               text: 'Login   ',
                                               options: FFButtonOptions(

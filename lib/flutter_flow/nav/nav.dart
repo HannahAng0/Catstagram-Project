@@ -117,6 +117,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'OnboringPage',
           path: '/onboringPage',
           builder: (context, params) => const OnboringPageWidget(),
+        ),
+        FFRoute(
+          name: 'EditProfilePage',
+          path: '/editProfilePage',
+          builder: (context, params) => const EditProfilePageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

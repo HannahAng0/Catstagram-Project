@@ -4,25 +4,25 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/upload_data.dart';
 import 'package:flutter/material.dart';
-import 'profile_page_model.dart';
-export 'profile_page_model.dart';
+import 'edit_profile_page_model.dart';
+export 'edit_profile_page_model.dart';
 
-class ProfilePageWidget extends StatefulWidget {
-  const ProfilePageWidget({super.key});
+class EditProfilePageWidget extends StatefulWidget {
+  const EditProfilePageWidget({super.key});
 
   @override
-  State<ProfilePageWidget> createState() => _ProfilePageWidgetState();
+  State<EditProfilePageWidget> createState() => _EditProfilePageWidgetState();
 }
 
-class _ProfilePageWidgetState extends State<ProfilePageWidget> {
-  late ProfilePageModel _model;
+class _EditProfilePageWidgetState extends State<EditProfilePageWidget> {
+  late EditProfilePageModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => ProfilePageModel());
+    _model = createModel(context, () => EditProfilePageModel());
   }
 
   @override
@@ -398,9 +398,9 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                                     0.0,
                                                                     0.0),
                                                         child: FFButtonWidget(
-                                                          onPressed: () async {
-                                                            context.pushNamed(
-                                                                'EditProfilePage');
+                                                          onPressed: () {
+                                                            print(
+                                                                'changeDP pressed ...');
                                                           },
                                                           text: 'Edit Profile',
                                                           options:
