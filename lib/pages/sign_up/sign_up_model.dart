@@ -5,43 +5,45 @@ import 'package:flutter/material.dart';
 class SignUpModel extends FlutterFlowModel<SignUpWidget> {
   ///  State fields for stateful widgets in this page.
 
-  // State field(s) for EnterUser widget.
-  FocusNode? enterUserFocusNode;
-  TextEditingController? enterUserTextController;
-  String? Function(BuildContext, String?)? enterUserTextControllerValidator;
-  // State field(s) for EnterEmail widget.
-  FocusNode? enterEmailFocusNode;
-  TextEditingController? enterEmailTextController;
-  String? Function(BuildContext, String?)? enterEmailTextControllerValidator;
-  // State field(s) for Password widget.
+  // State field(s) for usernamedisplay widget.
+  FocusNode? usernamedisplayFocusNode;
+  TextEditingController? usernamedisplayTextController;
+  String? Function(BuildContext, String?)?
+      usernamedisplayTextControllerValidator;
+  // State field(s) for emailAddress widget.
+  FocusNode? emailAddressFocusNode;
+  TextEditingController? emailAddressTextController;
+  String? Function(BuildContext, String?)? emailAddressTextControllerValidator;
+  // State field(s) for password widget.
   FocusNode? passwordFocusNode;
   TextEditingController? passwordTextController;
   late bool passwordVisibility;
   String? Function(BuildContext, String?)? passwordTextControllerValidator;
-  // State field(s) for Confirm widget.
-  FocusNode? confirmFocusNode;
-  TextEditingController? confirmTextController;
-  late bool confirmVisibility;
-  String? Function(BuildContext, String?)? confirmTextControllerValidator;
+  // State field(s) for confirmPassword widget.
+  FocusNode? confirmPasswordFocusNode;
+  TextEditingController? confirmPasswordTextController;
+  late bool confirmPasswordVisibility;
+  String? Function(BuildContext, String?)?
+      confirmPasswordTextControllerValidator;
 
   @override
   void initState(BuildContext context) {
     passwordVisibility = false;
-    confirmVisibility = false;
+    confirmPasswordVisibility = false;
   }
 
   @override
   void dispose() {
-    enterUserFocusNode?.dispose();
-    enterUserTextController?.dispose();
+    usernamedisplayFocusNode?.dispose();
+    usernamedisplayTextController?.dispose();
 
-    enterEmailFocusNode?.dispose();
-    enterEmailTextController?.dispose();
+    emailAddressFocusNode?.dispose();
+    emailAddressTextController?.dispose();
 
     passwordFocusNode?.dispose();
     passwordTextController?.dispose();
 
-    confirmFocusNode?.dispose();
-    confirmTextController?.dispose();
+    confirmPasswordFocusNode?.dispose();
+    confirmPasswordTextController?.dispose();
   }
 }

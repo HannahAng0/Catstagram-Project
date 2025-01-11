@@ -26,5 +26,7 @@
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:248172629788:ios:2595a3c42b32a1cc5374d9</string>
+	<key>DATABASE_URL</key>
+	<string>https://catstagram-16063-default-rtdb.firebaseio.com</string>
 </dict>
 </plist>
