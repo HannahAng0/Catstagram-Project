@@ -226,7 +226,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                       width: double.infinity,
                                       height: 416.0,
                                       decoration: BoxDecoration(
-                                        color: const Color(0xBB5B2F1C),
+                                        color: const Color(0xFFFCFCFC),
                                         borderRadius:
                                             BorderRadius.circular(24.0),
                                       ),
@@ -235,11 +235,11 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                         children: [
                                           Align(
                                             alignment:
-                                                const AlignmentDirectional(0.0, -1.0),
+                                                const AlignmentDirectional(-1.0, 0.0),
                                             child: Padding(
                                               padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
-                                                      0.0, 20.0, 0.0, 0.0),
+                                                      25.0, 20.0, 0.0, 0.0),
                                               child: SingleChildScrollView(
                                                 scrollDirection:
                                                     Axis.horizontal,
@@ -248,7 +248,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                       MainAxisSize.max,
                                                   mainAxisAlignment:
                                                       MainAxisAlignment
-                                                          .spaceBetween,
+                                                          .spaceEvenly,
                                                   crossAxisAlignment:
                                                       CrossAxisAlignment.center,
                                                   children: [
@@ -261,7 +261,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                             fontFamily:
                                                                 'Roboto',
                                                             color: const Color(
-                                                                0xFFE6D8B8),
+                                                                0xFC93563C),
                                                             fontSize: 20.0,
                                                             letterSpacing: 0.0,
                                                           ),
@@ -273,6 +273,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                             currentUserDocument
                                                                 ?.userName,
                                                             ''),
+                                                        textAlign:
+                                                            TextAlign.start,
                                                         style: FlutterFlowTheme
                                                                 .of(context)
                                                             .bodyMedium
@@ -280,7 +282,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                               fontFamily:
                                                                   'Roboto',
                                                               color: const Color(
-                                                                  0xFFE6D8B8),
+                                                                  0xFC93563C),
                                                               fontSize: 20.0,
                                                               letterSpacing:
                                                                   0.0,
@@ -288,78 +290,69 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      const SizedBox(width: 70.0)),
+                                                      const SizedBox(width: 40.0)),
                                                 ),
                                               ),
                                             ),
                                           ),
-                                          SingleChildScrollView(
+                                          Align(
+                                            alignment:
+                                                const AlignmentDirectional(-1.0, 0.0),
+                                            child: Padding(
+                                              padding: const EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      25.0, 20.0, 0.0, 0.0),
+                                              child: SingleChildScrollView(
+                                                scrollDirection:
+                                                    Axis.horizontal,
+                                                child: Row(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment
+                                                          .spaceEvenly,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.center,
+                                                  children: [
+                                                    Text(
+                                                      'Email',
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
+                                                            fontFamily:
+                                                                'Roboto',
+                                                            color: const Color(
+                                                                0xFC93563C),
+                                                            fontSize: 20.0,
+                                                            letterSpacing: 0.0,
+                                                          ),
+                                                    ),
+                                                    Text(
+                                                      currentUserEmail,
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
+                                                            fontFamily:
+                                                                'Roboto',
+                                                            color: const Color(
+                                                                0xFC93563C),
+                                                            fontSize: 20.0,
+                                                            letterSpacing: 0.0,
+                                                          ),
+                                                    ),
+                                                  ].divide(
+                                                      const SizedBox(width: 40.0)),
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                          const SingleChildScrollView(
                                             scrollDirection: Axis.horizontal,
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                Align(
-                                                  alignment:
-                                                      const AlignmentDirectional(
-                                                          0.0, -1.0),
-                                                  child: Padding(
-                                                    padding:
-                                                        const EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 20.0,
-                                                                0.0, 0.0),
-                                                    child:
-                                                        SingleChildScrollView(
-                                                      scrollDirection:
-                                                          Axis.horizontal,
-                                                      child: Row(
-                                                        mainAxisSize:
-                                                            MainAxisSize.max,
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .spaceBetween,
-                                                        crossAxisAlignment:
-                                                            CrossAxisAlignment
-                                                                .center,
-                                                        children: [
-                                                          Text(
-                                                            'Email',
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Roboto',
-                                                                  color: const Color(
-                                                                      0xFFE6D8B8),
-                                                                  fontSize:
-                                                                      20.0,
-                                                                  letterSpacing:
-                                                                      0.0,
-                                                                ),
-                                                          ),
-                                                          Text(
-                                                            currentUserEmail,
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Roboto',
-                                                                  color: const Color(
-                                                                      0xFFE6D8B8),
-                                                                  fontSize:
-                                                                      20.0,
-                                                                  letterSpacing:
-                                                                      0.0,
-                                                                ),
-                                                          ),
-                                                        ].divide(const SizedBox(
-                                                            width: 155.0)),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ],
+                                              children: [],
                                             ),
                                           ),
                                         ],

@@ -94,19 +94,30 @@ class _SignUpWidgetState extends State<SignUpWidget>
                           width: 203.0,
                           height: 50.0,
                           decoration: const BoxDecoration(),
-                          child: Text(
-                            'Catstagram',
-                            textAlign: TextAlign.center,
-                            style: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .override(
-                                  fontFamily: 'Mickey',
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryBackground,
-                                  fontSize: 45.0,
-                                  letterSpacing: 0.0,
-                                  useGoogleFonts: false,
-                                ),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Text(
+                                'CATSTAGRAM',
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Mickey',
+                                      fontSize: 40.0,
+                                      letterSpacing: 0.0,
+                                      useGoogleFonts: false,
+                                    ),
+                              ),
+                              Text(
+                                'VIRTUAL CAT ADOPTION APP',
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Roboto',
+                                      letterSpacing: 0.0,
+                                    ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
@@ -138,6 +149,7 @@ class _SignUpWidgetState extends State<SignUpWidget>
                                             letterSpacing: 0.0,
                                           ),
                                   indicatorColor: const Color(0xFF4B3D26),
+                                  padding: const EdgeInsets.all(6.0),
                                   tabs: const [
                                     Row(
                                       mainAxisAlignment:
@@ -176,6 +188,7 @@ class _SignUpWidgetState extends State<SignUpWidget>
                               Expanded(
                                 child: TabBarView(
                                   controller: _model.signUpBarController,
+                                  physics: const NeverScrollableScrollPhysics(),
                                   children: [
                                     Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(

@@ -42,7 +42,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        drawer: Drawer(
+        endDrawer: Drawer(
           elevation: 16.0,
           child: Column(
             mainAxisSize: MainAxisSize.max,
@@ -256,7 +256,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   color: Colors.transparent,
                                   child: ListTile(
                                     title: Text(
-                                      'Posts',
+                                      'idk wat to put here',
                                       style: FlutterFlowTheme.of(context)
                                           .titleLarge
                                           .override(
@@ -449,7 +449,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         )
                       ],
                       gradient: LinearGradient(
-                        colors: [Color(0xFFA65E2E), Color(0xFFE6D8B8)],
+                        colors: [Color(0xFFE6D8B8), Color(0xFFE6D8B8)],
                         stops: [0.0, 1.0],
                         begin: AlignmentDirectional(0.0, -1.0),
                         end: AlignmentDirectional(0, 1.0),
@@ -458,37 +458,79 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       children: [
-                        FlutterFlowIconButton(
-                          borderRadius: 8.0,
-                          buttonSize: 70.0,
-                          icon: const Icon(
-                            Icons.menu,
-                            color: Color(0xEB7A4934),
-                            size: 29.0,
-                          ),
-                          onPressed: () async {
-                            scaffoldKey.currentState!.openDrawer();
-                          },
-                        ),
                         Container(
-                          width: 242.0,
+                          width: 320.0,
                           height: 100.0,
                           decoration: const BoxDecoration(),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    5.0, 0.0, 0.0, 0.0),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Align(
+                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      child: Padding(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 20.0, 0.0, 0.0),
+                                        child: Text(
+                                          'Welcome, ',
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'Roboto',
+                                                fontSize: 25.0,
+                                                letterSpacing: 0.0,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                        ),
+                                      ),
+                                    ),
+                                    Align(
+                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      child: Padding(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 20.0, 0.0, 0.0),
+                                        child: AuthUserStreamWidget(
+                                          builder: (context) => Text(
+                                            currentUserDisplayName,
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily: 'Roboto',
+                                                  fontSize: 25.0,
+                                                  letterSpacing: 0.0,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Align(
+                          alignment: const AlignmentDirectional(1.0, -1.0),
                           child: Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
-                                20.0, 25.0, 20.0, 15.0),
-                            child: Text(
-                              'Catstagram',
-                              textAlign: TextAlign.center,
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: 'Mickey',
-                                    color: const Color(0xBD653D2D),
-                                    fontSize: 45.0,
-                                    letterSpacing: 0.0,
-                                    useGoogleFonts: false,
-                                  ),
+                                0.0, 10.0, 0.0, 0.0),
+                            child: FlutterFlowIconButton(
+                              borderRadius: 8.0,
+                              buttonSize: 70.0,
+                              icon: const Icon(
+                                Icons.menu,
+                                color: Color(0xEB7A4934),
+                                size: 29.0,
+                              ),
+                              onPressed: () async {
+                                scaffoldKey.currentState!.openDrawer();
+                              },
                             ),
                           ),
                         ),
