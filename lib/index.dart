@@ -8,3 +8,5 @@ export '/about_us_page/about_us_page_widget.dart' show AboutUsPageWidget;
 export '/onboring_page/onboring_page_widget.dart' show OnboringPageWidget;
 export '/edit_profile_page/edit_profile_page_widget.dart'
     show EditProfilePageWidget;
+export '/pages/pet_adoption_page/pet_adoption_page_widget.dart'
+    show PetAdoptionPageWidget;

@@ -125,6 +125,7 @@ class _NavBarPageState extends State<NavBarPage> {
       'HomePage': const HomePageWidget(),
       'Notification': const NotificationWidget(),
       'ProfilePage': const ProfilePageWidget(),
+      'PetAdoptionPage': const PetAdoptionPageWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -166,7 +167,7 @@ class _NavBarPageState extends State<NavBarPage> {
                   size: 24.0,
                 ),
                 Text(
-                  'Home',
+                  'Pet Adoption',
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     color: currentIndex == 0
@@ -218,6 +219,30 @@ class _NavBarPageState extends State<NavBarPage> {
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     color: currentIndex == 2
+                        ? const Color(0xDB7B422A)
+                        : FlutterFlowTheme.of(context).secondaryText,
+                    fontSize: 11.0,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          FloatingNavbarItem(
+            customWidget: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.home_outlined,
+                  color: currentIndex == 3
+                      ? const Color(0xDB7B422A)
+                      : FlutterFlowTheme.of(context).secondaryText,
+                  size: 24.0,
+                ),
+                Text(
+                  'Home',
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    color: currentIndex == 3
                         ? const Color(0xDB7B422A)
                         : FlutterFlowTheme.of(context).secondaryText,
                     fontSize: 11.0,

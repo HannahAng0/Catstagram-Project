@@ -129,6 +129,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'EditProfilePage',
           path: '/editProfilePage',
           builder: (context, params) => const EditProfilePageWidget(),
+        ),
+        FFRoute(
+          name: 'PetAdoptionPage',
+          path: '/petAdoptionPage',
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'PetAdoptionPage')
+              : const PetAdoptionPageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
