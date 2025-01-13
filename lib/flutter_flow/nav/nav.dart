@@ -6,6 +6,7 @@ import 'package:provider/provider.dart';
 import '/auth/base_auth_user_provider.dart';
 
 import '/index.dart';
+import '/main.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 
@@ -75,13 +76,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const HomePageWidget() : const SignUpWidget(),
+          appStateNotifier.loggedIn ? const NavBarPage() : const SignUpWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? const HomePageWidget() : const SignUpWidget(),
+              appStateNotifier.loggedIn ? const NavBarPage() : const SignUpWidget(),
         ),
         FFRoute(
           name: 'SignUp',
@@ -91,17 +92,23 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'HomePage',
           path: '/homePage',
-          builder: (context, params) => const HomePageWidget(),
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'HomePage')
+              : const HomePageWidget(),
         ),
         FFRoute(
           name: 'ProfilePage',
           path: '/profilePage',
-          builder: (context, params) => const ProfilePageWidget(),
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'ProfilePage')
+              : const ProfilePageWidget(),
         ),
         FFRoute(
-          name: 'Posts',
-          path: '/posts',
-          builder: (context, params) => const PostsWidget(),
+          name: 'Notification',
+          path: '/notification',
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'Notification')
+              : const NotificationWidget(),
         ),
         FFRoute(
           name: 'SettingsPage',

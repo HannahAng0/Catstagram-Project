@@ -1,25 +1,25 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'posts_model.dart';
-export 'posts_model.dart';
+import 'notification_model.dart';
+export 'notification_model.dart';
 
-class PostsWidget extends StatefulWidget {
-  const PostsWidget({super.key});
+class NotificationWidget extends StatefulWidget {
+  const NotificationWidget({super.key});
 
   @override
-  State<PostsWidget> createState() => _PostsWidgetState();
+  State<NotificationWidget> createState() => _NotificationWidgetState();
 }
 
-class _PostsWidgetState extends State<PostsWidget> {
-  late PostsModel _model;
+class _NotificationWidgetState extends State<NotificationWidget> {
+  late NotificationModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => PostsModel());
+    _model = createModel(context, () => NotificationModel());
   }
 
   @override
